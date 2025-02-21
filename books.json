@@ -1,0 +1,12 @@
+[
+  {
+    "key": "refactoring",
+    "title": "The Art of Refactoring (T. P. Hollebeek, 2020)",
+    "image": "https://picsum.photos/240/320"
+  },
+  {
+    "key": "clean_code",
+    "title": "Clean Code (T. P. Hollebeek, 1999)",
+    "summary": "Hacks for the clean coder"
+  }
+]

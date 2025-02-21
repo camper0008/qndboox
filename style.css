@@ -1,0 +1,109 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #1b0e15;
+  color: #f1e4eb;
+  font-family: sans-serif;
+}
+
+body:has(.which-way), body:has(.which-book) {
+  margin: 0;
+}
+
+.which-way {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  min-height: 100vh;
+}
+
+.which-way h1 {
+  grid-area: 1 / 1 / span 1 / span 2;
+  margin: 0;
+  margin-bottom: 3rem;
+  align-self: end;
+  text-align: center;
+}
+
+.which-way a {
+  align-self: start;
+  grid-row-start: 2;
+}
+
+.which-way a button {
+  width: 100%;
+}
+
+.which-book {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.which-book .img {
+  background-color: #a2537d;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 120px;
+  height: 160px;
+}
+
+.which-book .book {
+  display: flex;
+  gap: 1rem;
+}
+
+.return-to-home {
+  margin-inline: auto;
+  max-width: 1000px;
+}
+
+.return-to-home a {
+  color: inherit;
+}
+
+button {
+  font: unset;
+  border: unset;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  background-color: #a2537d;
+  padding: 0.5em 0.75em;
+
+  transition: 200ms opacity;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  color: unset;
+  filter: grayscale(0.7);
+}
+
+button:not([disabled]):hover {
+  opacity: 0.8;
+}
+
+button:not([disabled]):active {
+  opacity: 0.5;
+}
